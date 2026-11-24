@@ -1,0 +1,75 @@
+{
+ "name": "A to B",
+ "note": "Day 3-5 milestone: lift off table A, land on table B (1 m gap). EDIT tables / tags to match the room before flying (cm, origin = centre of table A's top, x toward B, y LEFT, z up). The drone is put on A with its TAIL toward B (heading 180): the takeoff lurch (~30 cm/s backward for ~2 s, notes/drift_battery.md) then goes toward B instead of toward you, and the drone camera looks at tag L next to the laptop (gives the distance the webcam is weak at). It flies to B tail-first.",
+ "tables": {
+  "A": {
+   "center": [
+    0,
+    0,
+    0
+   ],
+   "size": [
+    40,
+    40
+   ]
+  },
+  "B": {
+   "center": [
+    140,
+    0,
+    0
+   ],
+   "size": [
+    40,
+    40
+   ]
+  }
+ },
+ "heading_deg": 180,
+ "start_offset_cm": [
+  0,
+  0
+ ],
+ "tags": {
+  "L": {
+   "id": 1,
+   "size_cm": 10,
+   "center": [
+    -95,
+    25,
+    35
+   ],
+   "facing": [
+    1,
+    0,
+    0
+   ],
+   "note": "tag 1 upright next to the laptop (25 cm left of the webcam, centre 35 cm above A's top), print facing the drone. A bigger matte tag (15 cm) reads better from the air."
+  },
+  "B": {
+   "id": 2,
+   "size_cm": 10,
+   "center": [
+    160,
+    0,
+    25
+   ],
+   "facing": [
+    -1,
+    0,
+    0
+   ],
+   "note": "tag 2 upright at B's far edge, centre 25 cm above B's top, print facing A (used when the nose points to B; also lets observe.py --calibrate find the laptop camera pose)"
+  }
+ },
+ "route": [
+  "A",
+  "B"
+ ],
+ "cruise_height_cm": 40,
+ "land_height_cm": 20,
+ "max_speed_cm_s": 20,
+ "max_accel_cm_s2": 25,
+ "time_cap_s": 30,
+ "no_fly": []
+}

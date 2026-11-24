@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 775 345" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img">
+  <title>From drone video to a 3D map in six steps: record, pick frames, find camera spots, hide the person, train the splats, walk through it</title>
+  <defs>
+    <marker id="ar" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#6e7781"/></marker>
+  </defs>
+  <rect x="1" y="1" width="773" height="343" rx="16" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+
+  <!-- Row 1 -->
+  <rect x="20" y="20" width="225" height="125" rx="12" fill="#ddf4ff" stroke="#0969da" stroke-width="2.5"/>
+  <circle cx="44" cy="46" r="14" fill="#0969da"/><text x="44" y="51" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">1</text>
+  <text x="66" y="51" font-size="15" font-weight="700" fill="#1f2328">Record</text>
+  <text x="34" y="80" font-size="13" fill="#1f2328">Follow-me flight.</text>
+  <text x="34" y="98" font-size="13" fill="#1f2328">4K video goes onto</text>
+  <text x="34" y="116" font-size="13" fill="#1f2328">the SD card.</text>
+  <rect x="140" y="112" width="95" height="24" rx="12" fill="#0969da"/>
+  <text x="187" y="128" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">ON THE DRONE</text>
+
+  <rect x="275" y="20" width="225" height="125" rx="12" fill="#f6f8fa" stroke="#6e7781" stroke-width="2.5"/>
+  <circle cx="299" cy="46" r="14" fill="#6e7781"/><text x="299" y="51" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">2</text>
+  <text x="321" y="51" font-size="15" font-weight="700" fill="#1f2328">Pick frames</text>
+  <text x="289" y="80" font-size="13" fill="#1f2328">A few sharp frames</text>
+  <text x="289" y="98" font-size="13" fill="#1f2328">per second. Blurry</text>
+  <text x="289" y="116" font-size="13" fill="#1f2328">ones are skipped.</text>
+  <rect x="410" y="112" width="80" height="24" rx="12" fill="#6e7781"/>
+  <text x="450" y="128" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">LAPTOP</text>
+
+  <rect x="530" y="20" width="225" height="125" rx="12" fill="#f6f8fa" stroke="#6e7781" stroke-width="2.5"/>
+  <circle cx="554" cy="46" r="14" fill="#6e7781"/><text x="554" y="51" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">3</text>
+  <text x="576" y="51" font-size="15" font-weight="700" fill="#1f2328">Find camera spots</text>
+  <text x="544" y="80" font-size="13" fill="#1f2328">Software works out</text>
+  <text x="544" y="98" font-size="13" fill="#1f2328">where the camera was</text>
+  <text x="544" y="116" font-size="13" fill="#1f2328">for every frame.</text>
+  <rect x="665" y="112" width="80" height="24" rx="12" fill="#6e7781"/>
+  <text x="705" y="128" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">LAPTOP</text>
+
+  <!-- Arrows row 1 -->
+  <line x1="248" y1="82" x2="272" y2="82" stroke="#6e7781" stroke-width="3" marker-end="url(#ar)"/>
+  <line x1="503" y1="82" x2="527" y2="82" stroke="#6e7781" stroke-width="3" marker-end="url(#ar)"/>
+  <!-- Elbow to row 2 -->
+  <path d="M642,148 V167 H132 V186" fill="none" stroke="#6e7781" stroke-width="3" marker-end="url(#ar)"/>
+
+  <!-- Row 2 -->
+  <rect x="20" y="190" width="225" height="125" rx="12" fill="#f6f8fa" stroke="#6e7781" stroke-width="2.5"/>
+  <circle cx="44" cy="216" r="14" fill="#6e7781"/><text x="44" y="221" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">4</text>
+  <text x="66" y="221" font-size="15" font-weight="700" fill="#1f2328">Hide the person</text>
+  <text x="34" y="250" font-size="13" fill="#1f2328">Anyone who moves is</text>
+  <text x="34" y="268" font-size="13" fill="#1f2328">masked out, so only</text>
+  <text x="34" y="286" font-size="13" fill="#1f2328">the still world stays.</text>
+  <rect x="155" y="282" width="80" height="24" rx="12" fill="#6e7781"/>
+  <text x="195" y="298" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">LAPTOP</text>
+
+  <rect x="275" y="190" width="225" height="125" rx="12" fill="#fbefff" stroke="#8250df" stroke-width="2.5"/>
+  <circle cx="299" cy="216" r="14" fill="#8250df"/><text x="299" y="221" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">5</text>
+  <text x="321" y="221" font-size="15" font-weight="700" fill="#1f2328">Train the splats</text>
+  <text x="289" y="250" font-size="13" fill="#1f2328">A GPU turns the frames</text>
+  <text x="289" y="268" font-size="13" fill="#1f2328">into millions of fuzzy 3D</text>
+  <text x="289" y="286" font-size="13" fill="#1f2328">blobs. Minutes to hours.</text>
+  <rect x="440" y="282" width="52" height="24" rx="12" fill="#8250df"/>
+  <text x="466" y="298" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">GPU</text>
+
+  <rect x="530" y="190" width="225" height="125" rx="12" fill="#effaf2" stroke="#1a7f37" stroke-width="2.5"/>
+  <circle cx="554" cy="216" r="14" fill="#1a7f37"/><text x="554" y="221" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">6</text>
+  <text x="576" y="221" font-size="15" font-weight="700" fill="#1f2328">Walk through it</text>
+  <text x="544" y="250" font-size="13" fill="#1f2328">View it on a PC in real</text>
+  <text x="544" y="268" font-size="13" fill="#1f2328">time and fly a virtual</text>
+  <text x="544" y="286" font-size="13" fill="#1f2328">camera through it.</text>
+  <rect x="685" y="282" width="60" height="24" rx="12" fill="#1a7f37"/>
+  <text x="715" y="298" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">PC</text>
+
+  <!-- Arrows row 2 -->
+  <line x1="248" y1="252" x2="272" y2="252" stroke="#6e7781" stroke-width="3" marker-end="url(#ar)"/>
+  <line x1="503" y1="252" x2="527" y2="252" stroke="#6e7781" stroke-width="3" marker-end="url(#ar)"/>
+
+  <text x="20" y="335" font-size="12.5" fill="#59636e">The drone only records. Steps 2 to 6 happen after the flight.</text>
+</svg>

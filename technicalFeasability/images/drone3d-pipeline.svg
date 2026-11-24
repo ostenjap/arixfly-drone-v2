@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 775 410" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img">
+  <title>From drone photos to a shared 3D view in six steps: plan, fly, check, find camera spots, build 3D, share</title>
+  <defs>
+    <marker id="ar" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#6e7781"/></marker>
+  </defs>
+  <rect x="1" y="1" width="773" height="408" rx="16" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+
+  <!-- Row 1 -->
+  <rect x="20" y="20" width="225" height="150" rx="12" fill="#ddf4ff" stroke="#0969da" stroke-width="2.5"/>
+  <circle cx="44" cy="46" r="14" fill="#0969da"/><text x="44" y="51" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">1</text>
+  <text x="66" y="51" font-size="15" font-weight="700" fill="#1f2328">Plan</text>
+  <text x="34" y="82" font-size="13" fill="#1f2328">Draw the area on a map.</text>
+  <text x="34" y="100" font-size="13" fill="#1f2328">The app plans orbits or a</text>
+  <text x="34" y="118" font-size="13" fill="#1f2328">grid, with enough overlap.</text>
+  <rect x="34" y="132" width="60" height="24" rx="12" fill="#0969da"/>
+  <text x="64" y="148" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">APP</text>
+
+  <rect x="275" y="20" width="225" height="150" rx="12" fill="#ddf4ff" stroke="#0969da" stroke-width="2.5"/>
+  <circle cx="299" cy="46" r="14" fill="#0969da"/><text x="299" y="51" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">2</text>
+  <text x="321" y="51" font-size="15" font-weight="700" fill="#1f2328">Fly</text>
+  <text x="289" y="82" font-size="13" fill="#1f2328">The drone follows the plan</text>
+  <text x="289" y="100" font-size="13" fill="#1f2328">and takes photos or video.</text>
+  <text x="289" y="118" font-size="13" fill="#1f2328">Slow flying keeps shots sharp.</text>
+  <rect x="289" y="132" width="70" height="24" rx="12" fill="#0969da"/>
+  <text x="324" y="148" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">DRONE</text>
+
+  <rect x="530" y="20" width="225" height="150" rx="12" fill="#ddf4ff" stroke="#0969da" stroke-width="2.5"/>
+  <circle cx="554" cy="46" r="14" fill="#0969da"/><text x="554" y="51" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">3</text>
+  <text x="576" y="51" font-size="15" font-weight="700" fill="#1f2328">Check</text>
+  <text x="544" y="82" font-size="13" fill="#1f2328">The app finds missing sides,</text>
+  <text x="544" y="100" font-size="13" fill="#1f2328">such as the north wall, and</text>
+  <text x="544" y="118" font-size="13" fill="#1f2328">asks for a quick extra pass.</text>
+  <rect x="544" y="132" width="60" height="24" rx="12" fill="#0969da"/>
+  <text x="574" y="148" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">APP</text>
+
+  <line x1="248" y1="95" x2="272" y2="95" stroke="#6e7781" stroke-width="3" marker-end="url(#ar)"/>
+  <line x1="503" y1="95" x2="527" y2="95" stroke="#6e7781" stroke-width="3" marker-end="url(#ar)"/>
+  <path d="M642,174 V192 H132 V210" fill="none" stroke="#6e7781" stroke-width="3" marker-end="url(#ar)"/>
+
+  <!-- Row 2 -->
+  <rect x="20" y="214" width="225" height="150" rx="12" fill="#fbefff" stroke="#8250df" stroke-width="2.5"/>
+  <circle cx="44" cy="240" r="14" fill="#8250df"/><text x="44" y="245" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">4</text>
+  <text x="66" y="245" font-size="15" font-weight="700" fill="#1f2328">Find camera spots</text>
+  <text x="34" y="276" font-size="13" fill="#1f2328">AI finds where each photo</text>
+  <text x="34" y="294" font-size="13" fill="#1f2328">was taken and how far away</text>
+  <text x="34" y="312" font-size="13" fill="#1f2328">things are in each one.</text>
+  <rect x="34" y="326" width="110" height="24" rx="12" fill="#8250df"/>
+  <text x="89" y="342" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">AI + GPU</text>
+
+  <rect x="275" y="214" width="225" height="150" rx="12" fill="#fbefff" stroke="#8250df" stroke-width="2.5"/>
+  <circle cx="299" cy="240" r="14" fill="#8250df"/><text x="299" y="245" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">5</text>
+  <text x="321" y="245" font-size="15" font-weight="700" fill="#1f2328">Build the 3D</text>
+  <text x="289" y="276" font-size="13" fill="#1f2328">AI trains a splat that looks</text>
+  <text x="289" y="294" font-size="13" fill="#1f2328">like the real scene. Minutes</text>
+  <text x="289" y="312" font-size="13" fill="#1f2328">to hours, on a GPU.</text>
+  <rect x="289" y="326" width="110" height="24" rx="12" fill="#8250df"/>
+  <text x="344" y="342" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">AI + GPU</text>
+
+  <rect x="530" y="214" width="225" height="150" rx="12" fill="#effaf2" stroke="#1a7f37" stroke-width="2.5"/>
+  <circle cx="554" cy="240" r="14" fill="#1a7f37"/><text x="554" y="245" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">6</text>
+  <text x="576" y="245" font-size="15" font-weight="700" fill="#1f2328">Share</text>
+  <text x="544" y="276" font-size="13" fill="#1f2328">A 3D view you can spin and</text>
+  <text x="544" y="294" font-size="13" fill="#1f2328">send to friends as a link,</text>
+  <text x="544" y="312" font-size="13" fill="#1f2328">with the whole trip on it.</text>
+  <rect x="544" y="326" width="110" height="24" rx="12" fill="#1a7f37"/>
+  <text x="599" y="342" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">ANY DEVICE</text>
+
+  <line x1="248" y1="289" x2="272" y2="289" stroke="#6e7781" stroke-width="3" marker-end="url(#ar)"/>
+  <line x1="503" y1="289" x2="527" y2="289" stroke="#6e7781" stroke-width="3" marker-end="url(#ar)"/>
+
+  <text x="20" y="390" font-size="12.5" fill="#59636e">Steps 1 to 3 happen at the site. Steps 4 to 6 run afterwards on a GPU, on your PC or in the cloud.</text>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 492" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img">
+  <title>Both phones join the drone's Wi-Fi. Only the link phone sends commands to the drone; the other phone sends its sticks to the link phone.</title>
+  <defs>
+    <marker id="ag" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#1a7f37"/></marker>
+    <marker id="ab" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#0969da"/></marker>
+  </defs>
+  <rect x="1" y="1" width="758" height="490" rx="16" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+
+  <!-- The drone's Wi-Fi network -->
+  <rect x="20" y="20" width="720" height="424" rx="24" fill="#f5faff" stroke="#0969da" stroke-width="2.5" stroke-dasharray="10 7"/>
+  <text x="40" y="50" font-size="13.5" font-weight="700" fill="#0b3d91">THE DRONE'S WI-FI</text>
+  <text x="40" y="68" font-size="12.5" fill="#0b3d91">both phones join it, no internet needed</text>
+
+  <!-- Drone (top view) with Wi-Fi arcs -->
+  <path d="M362,72 Q380,58 398,72" fill="none" stroke="#0969da" stroke-width="3" stroke-linecap="round"/>
+  <path d="M352,60 Q380,38 408,60" fill="none" stroke="#0969da" stroke-width="3" stroke-linecap="round"/>
+  <line x1="352" y1="90" x2="408" y2="140" stroke="#1f2328" stroke-width="5" stroke-linecap="round"/>
+  <line x1="408" y1="90" x2="352" y2="140" stroke="#1f2328" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="352" cy="90" r="14" fill="#d0d7de" stroke="#1f2328" stroke-width="2.5"/>
+  <circle cx="408" cy="90" r="14" fill="#d0d7de" stroke="#1f2328" stroke-width="2.5"/>
+  <circle cx="352" cy="140" r="14" fill="#d0d7de" stroke="#1f2328" stroke-width="2.5"/>
+  <circle cx="408" cy="140" r="14" fill="#d0d7de" stroke="#1f2328" stroke-width="2.5"/>
+  <rect x="369" y="104" width="22" height="22" rx="6" fill="#0969da"/>
+  <text x="380" y="176" text-anchor="middle" font-size="15" font-weight="700" fill="#1f2328">30 g drone</text>
+  <text x="380" y="193" text-anchor="middle" font-size="12.5" fill="#59636e">is the Wi-Fi hotspot</text>
+
+  <!-- Dad's phone: link phone with the gate -->
+  <rect x="60" y="240" width="200" height="164" rx="24" fill="#1f2328"/>
+  <rect x="70" y="252" width="180" height="140" rx="14" fill="#effaf2"/>
+  <rect x="85" y="260" width="150" height="32" rx="16" fill="#1a7f37"/>
+  <text x="160" y="282" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">DAD · YOU FLY</text>
+  <rect x="85" y="302" width="150" height="76" rx="10" fill="#ddf4ff" stroke="#0969da" stroke-width="2"/>
+  <text x="160" y="324" text-anchor="middle" font-size="13" font-weight="700" fill="#0b3d91">CONTROL GATE</text>
+  <text x="160" y="342" text-anchor="middle" font-size="11.5" fill="#0b3d91">inside the app</text>
+  <text x="160" y="364" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1f2328">pilot: DAD</text>
+  <text x="160" y="425" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1a7f37">LINK PHONE</text>
+
+  <!-- Son's phone: co-pilot -->
+  <rect x="500" y="240" width="200" height="164" rx="24" fill="#1f2328"/>
+  <rect x="510" y="252" width="180" height="140" rx="14" fill="#f3f4f6"/>
+  <rect x="525" y="260" width="150" height="32" rx="16" fill="#6e7781"/>
+  <text x="600" y="282" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">SON · YOU WATCH</text>
+  <rect x="527" y="304" width="146" height="28" rx="14" fill="#ffffff" stroke="#0969da" stroke-width="2"/>
+  <text x="600" y="323" text-anchor="middle" font-size="12.5" font-weight="600" fill="#0969da">Ask for control</text>
+  <rect x="560" y="344" width="80" height="30" rx="15" fill="#cf222e"/>
+  <text x="600" y="365" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">STOP</text>
+  <text x="600" y="425" text-anchor="middle" font-size="12.5" font-weight="700" fill="#6e7781">OTHER PHONE</text>
+
+  <!-- Dad's phone talks to the drone -->
+  <line x1="196" y1="236" x2="338" y2="154" stroke="#1a7f37" stroke-width="4" marker-end="url(#ag)"/>
+  <text x="44" y="112" font-size="12.5" font-weight="600" fill="#1a7f37">Only this phone sends</text>
+  <text x="44" y="129" font-size="12.5" font-weight="600" fill="#1a7f37">commands to the drone</text>
+  <text x="44" y="146" font-size="12.5" font-weight="600" fill="#1a7f37">(about 50 per second)</text>
+
+  <!-- Son's phone never talks to the drone -->
+  <line x1="564" y1="236" x2="422" y2="154" stroke="#8c959f" stroke-width="4" stroke-dasharray="7 6"/>
+  <text x="493" y="205" text-anchor="middle" font-size="26" font-weight="700" fill="#cf222e">✕</text>
+  <text x="716" y="112" text-anchor="end" font-size="12.5" font-weight="600" fill="#6e7781">This phone never sends</text>
+  <text x="716" y="129" text-anchor="end" font-size="12.5" font-weight="600" fill="#6e7781">anything to the drone</text>
+
+  <!-- Son's phone talks to Dad's phone -->
+  <line x1="496" y1="316" x2="266" y2="316" stroke="#0969da" stroke-width="4" marker-end="url(#ab)"/>
+  <text x="380" y="298" text-anchor="middle" font-size="12.5" font-weight="600" fill="#0b3d91">Son's sticks + STOP</text>
+  <text x="380" y="340" text-anchor="middle" font-size="12.5" font-weight="600" fill="#0b3d91">go to Dad's phone.</text>
+  <text x="380" y="357" text-anchor="middle" font-size="12.5" font-weight="600" fill="#0b3d91">The gate drops the sticks</text>
+  <text x="380" y="374" text-anchor="middle" font-size="12.5" font-weight="600" fill="#0b3d91">unless Son is pilot.</text>
+
+  <!-- Footer rule -->
+  <circle cx="190" cy="470" r="6" fill="#cf222e"/>
+  <text x="204" y="475" font-size="14" font-weight="600" fill="#1f2328">STOP and land work from either phone, at any time</text>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 775 410" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img">
+  <title>Legal checklist in five steps plus always-on rules: learn, pass the exam, insure, register, label and check the map</title>
+  <defs>
+    <marker id="ar" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#6e7781"/></marker>
+  </defs>
+  <rect x="1" y="1" width="773" height="408" rx="16" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+
+  <!-- Row 1 -->
+  <rect x="20" y="20" width="225" height="150" rx="12" fill="#ddf4ff" stroke="#0969da" stroke-width="2.5"/>
+  <circle cx="44" cy="46" r="14" fill="#0969da"/><text x="44" y="51" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">1</text>
+  <text x="66" y="51" font-size="15" font-weight="700" fill="#1f2328">Learn</text>
+  <text x="34" y="82" font-size="13" fill="#1f2328">Free online course, with</text>
+  <text x="34" y="100" font-size="13" fill="#1f2328">tutors and practice tests</text>
+  <text x="34" y="118" font-size="13" fill="#1f2328">for your questions.</text>
+  <rect x="34" y="132" width="70" height="24" rx="12" fill="#0969da"/>
+  <text x="69" y="148" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">ONLINE</text>
+
+  <rect x="275" y="20" width="225" height="150" rx="12" fill="#effaf2" stroke="#1a7f37" stroke-width="2.5"/>
+  <circle cx="299" cy="46" r="14" fill="#1a7f37"/><text x="299" y="51" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">2</text>
+  <text x="321" y="51" font-size="15" font-weight="700" fill="#1f2328">Pass A1/A3</text>
+  <text x="289" y="82" font-size="13" fill="#1f2328">Online exam at the LBA.</text>
+  <text x="289" y="100" font-size="13" fill="#1f2328">Fee 25 euro, paid by us.</text>
+  <text x="289" y="118" font-size="13" fill="#1f2328">Valid for 5 years.</text>
+  <rect x="289" y="132" width="60" height="24" rx="12" fill="#1a7f37"/>
+  <text x="319" y="148" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">LBA</text>
+
+  <rect x="530" y="20" width="225" height="150" rx="12" fill="#f6f8fa" stroke="#6e7781" stroke-width="2.5"/>
+  <circle cx="554" cy="46" r="14" fill="#6e7781"/><text x="554" y="51" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">3</text>
+  <text x="576" y="51" font-size="15" font-weight="700" fill="#1f2328">Insure</text>
+  <text x="544" y="82" font-size="13" fill="#1f2328">Drone liability insurance.</text>
+  <text x="544" y="100" font-size="13" fill="#1f2328">You need it before you</text>
+  <text x="544" y="118" font-size="13" fill="#1f2328">can register.</text>
+  <rect x="544" y="132" width="92" height="24" rx="12" fill="#6e7781"/>
+  <text x="590" y="148" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">REQUIRED</text>
+
+  <line x1="248" y1="95" x2="272" y2="95" stroke="#6e7781" stroke-width="3" marker-end="url(#ar)"/>
+  <line x1="503" y1="95" x2="527" y2="95" stroke="#6e7781" stroke-width="3" marker-end="url(#ar)"/>
+  <path d="M642,174 V192 H132 V210" fill="none" stroke="#6e7781" stroke-width="3" marker-end="url(#ar)"/>
+
+  <!-- Row 2 -->
+  <rect x="20" y="214" width="225" height="150" rx="12" fill="#effaf2" stroke="#1a7f37" stroke-width="2.5"/>
+  <circle cx="44" cy="240" r="14" fill="#1a7f37"/><text x="44" y="245" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">4</text>
+  <text x="66" y="245" font-size="15" font-weight="700" fill="#1f2328">Register</text>
+  <text x="34" y="276" font-size="13" fill="#1f2328">Register as an operator at</text>
+  <text x="34" y="294" font-size="13" fill="#1f2328">the LBA. You get an e-ID.</text>
+  <text x="34" y="312" font-size="13" fill="#1f2328">Fee about 20 euro (to check).</text>
+  <rect x="34" y="326" width="60" height="24" rx="12" fill="#1a7f37"/>
+  <text x="64" y="342" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">LBA</text>
+
+  <rect x="275" y="214" width="225" height="150" rx="12" fill="#effaf2" stroke="#1a7f37" stroke-width="2.5"/>
+  <circle cx="299" cy="240" r="14" fill="#1a7f37"/><text x="299" y="245" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">5</text>
+  <text x="321" y="245" font-size="15" font-weight="700" fill="#1f2328">Label and check</text>
+  <text x="289" y="276" font-size="13" fill="#1f2328">Put the e-ID on the drone.</text>
+  <text x="289" y="294" font-size="13" fill="#1f2328">Check the drone map</text>
+  <text x="289" y="312" font-size="13" fill="#1f2328">(dipul.de) before each flight.</text>
+  <rect x="289" y="326" width="110" height="24" rx="12" fill="#1a7f37"/>
+  <text x="344" y="342" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">ON THE DRONE</text>
+
+  <rect x="530" y="214" width="225" height="150" rx="12" fill="#fff8e1" stroke="#9a6700" stroke-width="2.5"/>
+  <circle cx="554" cy="240" r="14" fill="#9a6700"/><text x="554" y="246" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">!</text>
+  <text x="576" y="245" font-size="15" font-weight="700" fill="#1f2328">Rules</text>
+  <text x="544" y="276" font-size="13" fill="#1f2328">Always on: keep it in sight,</text>
+  <text x="544" y="294" font-size="13" fill="#1f2328">stay away from crowds and</text>
+  <text x="544" y="312" font-size="13" fill="#1f2328">banned areas, check the map.</text>
+  <rect x="544" y="326" width="92" height="24" rx="12" fill="#9a6700"/>
+  <text x="590" y="342" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">ALWAYS ON</text>
+
+  <line x1="248" y1="289" x2="272" y2="289" stroke="#6e7781" stroke-width="3" marker-end="url(#ar)"/>
+  <line x1="503" y1="289" x2="527" y2="289" stroke="#9a6700" stroke-width="3" stroke-dasharray="5 4" marker-end="url(#ar)"/>
+
+  <text x="20" y="390" font-size="12.5" fill="#59636e">Do steps 1 to 5 in order before the first outdoor flight. The rules at the end apply to every flight after that.</text>
+</svg>

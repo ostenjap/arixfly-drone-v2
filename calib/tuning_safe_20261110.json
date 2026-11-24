@@ -1,0 +1,13 @@
+{
+ "trim_yaw": -10,
+ "trim_pitch": 16,
+ "trim_roll": -4,
+ "hold_on": 1,
+ "hold_gain": 0.035,
+ "hold_max": 0.4,
+ "hold_delay": 1.0,
+ "yaw_check": 0,
+ "approach_gain": 0.006,
+ "approach_max": 0.5,
+ "target_cm": 60
+}

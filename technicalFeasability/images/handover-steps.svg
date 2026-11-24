@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 775 290" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img">
+  <title>Handover in four steps: Dad flies, Dad hands over, Son takes over, Son flies</title>
+  <defs>
+    <marker id="ar" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#6e7781"/></marker>
+  </defs>
+  <rect x="1" y="1" width="773" height="288" rx="16" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+
+  <!-- Step 1 -->
+  <rect x="20" y="22" width="165" height="148" rx="12" fill="#effaf2" stroke="#1a7f37" stroke-width="2.5"/>
+  <circle cx="44" cy="48" r="14" fill="#1a7f37"/><text x="44" y="53" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">1</text>
+  <text x="66" y="53" font-size="14.5" font-weight="700" fill="#1f2328">Dad flies</text>
+  <text x="34" y="86" font-size="13" fill="#1f2328">Dad's sticks work.</text>
+  <text x="34" y="106" font-size="13" fill="#1f2328">Son's sticks are locked.</text>
+  <text x="34" y="138" font-size="13" fill="#59636e">Son can ask for control.</text>
+
+  <!-- Step 2 -->
+  <rect x="210" y="22" width="165" height="148" rx="12" fill="#fff8e1" stroke="#9a6700" stroke-width="2.5"/>
+  <circle cx="234" cy="48" r="14" fill="#9a6700"/><text x="234" y="53" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">2</text>
+  <text x="256" y="53" font-size="14.5" font-weight="700" fill="#1f2328">Dad hands over</text>
+  <text x="224" y="86" font-size="13" fill="#1f2328">Dad taps “You have</text>
+  <text x="224" y="106" font-size="13" fill="#1f2328">control”. Drone holds</text>
+  <text x="224" y="126" font-size="13" fill="#1f2328">still (hover).</text>
+  <text x="224" y="152" font-size="13" fill="#59636e">Both screens: amber.</text>
+
+  <!-- Step 3 -->
+  <rect x="400" y="22" width="165" height="148" rx="12" fill="#fff8e1" stroke="#9a6700" stroke-width="2.5"/>
+  <circle cx="424" cy="48" r="14" fill="#9a6700"/><text x="424" y="53" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">3</text>
+  <text x="446" y="53" font-size="14.5" font-weight="700" fill="#1f2328">Son takes over</text>
+  <text x="414" y="86" font-size="13" fill="#1f2328">Son taps “I have</text>
+  <text x="414" y="106" font-size="13" fill="#1f2328">control”. Only works</text>
+  <text x="414" y="126" font-size="13" fill="#1f2328">with sticks centred.</text>
+  <text x="414" y="152" font-size="13" fill="#59636e">Still hovering.</text>
+
+  <!-- Step 4 -->
+  <rect x="590" y="22" width="165" height="148" rx="12" fill="#effaf2" stroke="#1a7f37" stroke-width="2.5"/>
+  <circle cx="614" cy="48" r="14" fill="#1a7f37"/><text x="614" y="53" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">4</text>
+  <text x="636" y="53" font-size="14.5" font-weight="700" fill="#1f2328">Son flies</text>
+  <text x="604" y="86" font-size="13" fill="#1f2328">Son's sticks work.</text>
+  <text x="604" y="106" font-size="13" fill="#1f2328">Dad's sticks are locked.</text>
+  <text x="604" y="138" font-size="13" fill="#59636e">Both phones buzz.</text>
+
+  <!-- Arrows between steps -->
+  <line x1="188" y1="96" x2="207" y2="96" stroke="#6e7781" stroke-width="3" marker-end="url(#ar)"/>
+  <line x1="378" y1="96" x2="397" y2="96" stroke="#6e7781" stroke-width="3" marker-end="url(#ar)"/>
+  <line x1="568" y1="96" x2="587" y2="96" stroke="#6e7781" stroke-width="3" marker-end="url(#ar)"/>
+
+  <!-- Who is flying strip -->
+  <text x="20" y="206" font-size="13" font-weight="700" fill="#59636e">WHO IS FLYING</text>
+  <rect x="20" y="216" width="190" height="38" rx="8" fill="#1a7f37"/>
+  <text x="115" y="240" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">Dad</text>
+  <rect x="210" y="216" width="355" height="38" fill="#e3a008"/>
+  <text x="387" y="240" text-anchor="middle" font-size="15" font-weight="700" fill="#1f2328">Nobody. The drone hovers on its own.</text>
+  <rect x="565" y="216" width="190" height="38" rx="8" fill="#1a7f37"/>
+  <text x="660" y="240" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">Son</text>
+  <text x="20" y="276" font-size="12.5" fill="#59636e">There is never a moment with two pilots, and the drone never stops getting commands.</text>
+</svg>

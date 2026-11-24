@@ -1,0 +1,10 @@
+{
+  "name": "hover_test",
+  "note": "Day 3 step 1: no sticks. Measures hover drift and checks that 0x02 lands. Log the landing offset.",
+  "trim": {"roll": 0, "pitch": 0},
+  "moves": [
+    {"move": "takeoff", "s": 3},
+    {"move": "hover", "s": 3},
+    {"move": "land"}
+  ]
+}

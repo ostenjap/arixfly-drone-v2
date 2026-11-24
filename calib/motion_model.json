@@ -1,0 +1,87 @@
+{
+ "created": "motion_model.py fit",
+ "folders": [
+  "20261109_225836",
+  "20261109_234246"
+ ],
+ "n_segments": 3,
+ "units": "stick = (byte sent incl. trim - 128) / 127 (1 = full stick); positions in cm, tag frame; +-_se = leave-one-folder-out jackknife standard error",
+ "model": "dv/dt = (gain * stick(t - delay) + drift - v) / tau per body axis; yaw rate likewise",
+ "noise": {
+  "sigma_at_200cm": {
+   "side": 11.635591480415776,
+   "along": 2.4151605222604084,
+   "height": 0.5488889832891449,
+   "psi_deg": 2.3715273382763846
+  },
+  "scaling": "sigma * (clip(range, 80, 400) / 200)^2",
+  "n_pairs": 44,
+  "by_range": [
+   {
+    "range_cm": "150-250",
+    "n": 21,
+    "sigma": [
+     16.7,
+     3.8,
+     1.1,
+     3.5
+    ]
+   },
+   {
+    "range_cm": "250-1000",
+    "n": 23,
+    "sigma": [
+     13.0,
+     2.3,
+     0.4,
+     3.2
+    ]
+   }
+  ]
+ },
+ "h": {
+  "tau_s": 0.15,
+  "delay_s": 0.0,
+  "n_windows": 2,
+  "n_rows": 92,
+  "n_folders": 2,
+  "gain_forward_cm_s_per_pitch": 0.0,
+  "gain_forward_cm_s_per_pitch_se": 0.0,
+  "gain_right_cm_s_per_roll": 0.0,
+  "gain_right_cm_s_per_roll_se": 0.0,
+  "drift_forward_cm_s": -2.35,
+  "drift_forward_cm_s_se": 45.58,
+  "drift_right_cm_s": 20.08,
+  "drift_right_cm_s_se": 55.77,
+  "tau_s_se": 1.43,
+  "delay_s_se": 0.0
+ },
+ "z": {
+  "tau_s": 0.15,
+  "delay_s": 0.0,
+  "n_windows": 2,
+  "n_rows": 46,
+  "n_folders": 2,
+  "gain_up_cm_s_per_throttle": 135.6,
+  "gain_up_cm_s_per_throttle_se": 97.67,
+  "drift_up_cm_s": 19.15,
+  "drift_up_cm_s_se": 115.36,
+  "landing_extra_up_cm_s": -57.9,
+  "landing_extra_up_cm_s_se": 83.62,
+  "tau_s_se": 0.0,
+  "delay_s_se": 0.1
+ },
+ "yaw": {
+  "tau_s": 0.8,
+  "delay_s": 0.6,
+  "n_windows": 5,
+  "n_rows": 112,
+  "n_folders": 2,
+  "gain_yaw_deg_s_per_yaw": -43.85,
+  "gain_yaw_deg_s_per_yaw_se": 26.82,
+  "own_turn_deg_s": 1.44,
+  "own_turn_deg_s_se": 3.22,
+  "tau_s_se": 0.25,
+  "delay_s_se": 0.0
+ }
+}

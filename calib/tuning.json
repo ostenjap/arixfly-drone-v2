@@ -1,0 +1,20 @@
+{
+ "trim_yaw": -14,
+ "trim_pitch": 22,
+ "trim_roll": -2,
+ "hold_on": 1,
+ "hold_gain": 0.035,
+ "hold_max": 0.4,
+ "hold_delay": 1.0,
+ "yaw_check": 0,
+ "approach_gain": 0.006,
+ "approach_max": 0.5,
+ "target_cm": 60,
+ "hop_power": 0.5,
+ "hop_speed": 60.0,
+ "brake_max": 0.7,
+ "close_cm": 150,
+ "alt_on": 1,
+ "recover_s": 4.0,
+ "yaw_i": 0.012
+}

@@ -1,0 +1,12 @@
+{
+  "name": "forward_test",
+  "note": "Day 3 step 2: same as hover_test plus one 1 s forward push at half a key press. Gives cm/s at power 0.5.",
+  "trim": {"roll": 0, "pitch": 0},
+  "moves": [
+    {"move": "takeoff", "s": 3},
+    {"move": "hover", "s": 2},
+    {"move": "forward", "s": 1.0, "power": 0.5},
+    {"move": "hover", "s": 1},
+    {"move": "land"}
+  ]
+}

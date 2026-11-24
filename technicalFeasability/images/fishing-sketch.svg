@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img">
+  <title>Side view: a drone carries the fishing line and bait out over the water and drops the hook on a saved spot</title>
+  <defs>
+    <clipPath id="sc"><rect x="20" y="20" width="720" height="330" rx="18"/></clipPath>
+    <marker id="ar" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#0b3d91"/></marker>
+    <marker id="al" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="2" refY="6" orient="auto"><path d="M12,0 L0,6 L12,12 z" fill="#0b3d91"/></marker>
+    <marker id="aw" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="2" refY="6" orient="auto"><path d="M12,0 L0,6 L12,12 z" fill="#6e7781"/></marker>
+  </defs>
+  <rect x="1" y="1" width="758" height="438" rx="16" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+
+  <g clip-path="url(#sc)">
+    <rect x="20" y="20" width="720" height="330" fill="#eaf5fd"/>
+    <rect x="20" y="232" width="720" height="118" fill="#bfe3f5"/>
+    <path d="M250,262 q12,-8 24,0 t24,0 t24,0 M520,300 q12,-8 24,0 t24,0 t24,0 M330,322 q12,-8 24,0 t24,0" fill="none" stroke="#8cc7e6" stroke-width="2.5" stroke-linecap="round"/>
+    <polygon points="20,222 150,222 190,244 232,350 20,350" fill="#f0e0b8" stroke="#d6c08a" stroke-width="2"/>
+  </g>
+  <rect x="20" y="20" width="720" height="330" rx="18" fill="none" stroke="#b6d9ee" stroke-width="2"/>
+
+  <!-- Angler with rod -->
+  <circle cx="86" cy="172" r="9" fill="#f0883e" stroke="#bc4c00" stroke-width="2"/>
+  <line x1="86" y1="181" x2="86" y2="206" stroke="#bc4c00" stroke-width="4" stroke-linecap="round"/>
+  <line x1="86" y1="206" x2="78" y2="222" stroke="#bc4c00" stroke-width="4" stroke-linecap="round"/>
+  <line x1="86" y1="206" x2="95" y2="222" stroke="#bc4c00" stroke-width="4" stroke-linecap="round"/>
+  <line x1="86" y1="190" x2="104" y2="188" stroke="#bc4c00" stroke-width="4" stroke-linecap="round"/>
+  <line x1="100" y1="196" x2="158" y2="138" stroke="#1f2328" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="106" cy="193" r="5" fill="#6e7781" stroke="#1f2328" stroke-width="1.5"/>
+  <text x="90" y="262" text-anchor="middle" font-size="13" font-weight="700" fill="#7a5b14">you, on the shore</text>
+
+  <!-- Fishing line from rod to drone -->
+  <path d="M158,138 Q310,215 478,124" fill="none" stroke="#59636e" stroke-width="2"/>
+  <text x="318" y="208" text-anchor="middle" font-size="12.5" font-weight="600" fill="#59636e">fishing line, pulled off the reel</text>
+
+  <!-- Drone (side view) -->
+  <line x1="448" y1="92" x2="474" y2="92" stroke="#1f2328" stroke-width="4" stroke-linecap="round"/>
+  <line x1="490" y1="92" x2="516" y2="92" stroke="#1f2328" stroke-width="4" stroke-linecap="round"/>
+  <line x1="461" y1="92" x2="461" y2="100" stroke="#1f2328" stroke-width="3"/>
+  <line x1="503" y1="92" x2="503" y2="100" stroke="#1f2328" stroke-width="3"/>
+  <rect x="446" y="98" width="72" height="16" rx="7" fill="#0969da"/>
+  <rect x="475" y="114" width="14" height="9" rx="2" fill="#cf222e"/>
+  <text x="482" y="64" text-anchor="middle" font-size="14" font-weight="700" fill="#0b3d91">drone with bait release</text>
+  <text x="560" y="123" font-size="12.5" font-weight="600" fill="#cf222e">release clip</text>
+  <line x1="494" y1="119" x2="556" y2="119" stroke="#cf222e" stroke-width="1.5"/>
+
+  <!-- Hook and bait falling -->
+  <line x1="482" y1="124" x2="482" y2="222" stroke="#cf222e" stroke-width="2.5" stroke-dasharray="3 6" stroke-linecap="round"/>
+  <path d="M476,208 L482,226 L488,208 Z" fill="#cf222e"/>
+
+  <!-- Drop spot on the water -->
+  <ellipse cx="482" cy="246" rx="34" ry="9" fill="none" stroke="#cf222e" stroke-width="3"/>
+  <ellipse cx="482" cy="246" rx="14" ry="4" fill="none" stroke="#cf222e" stroke-width="2"/>
+  <text x="482" y="278" text-anchor="middle" font-size="13.5" font-weight="700" fill="#cf222e">drop spot</text>
+  <text x="482" y="295" text-anchor="middle" font-size="12.5" fill="#1f2328">a pin saved on the phone map</text>
+
+  <!-- Fish -->
+  <g fill="#7d9db3">
+    <ellipse cx="640" cy="300" rx="18" ry="8"/><polygon points="658,300 670,292 670,308"/>
+    <ellipse cx="600" cy="326" rx="14" ry="6"/><polygon points="614,326 624,320 624,332"/>
+  </g>
+
+  <!-- Distance dimension -->
+  <line x1="240" y1="336" x2="482" y2="336" stroke="#0b3d91" stroke-width="2.5" marker-start="url(#al)" marker-end="url(#ar)"/>
+  <text x="361" y="328" text-anchor="middle" font-size="13" font-weight="700" fill="#0b3d91">about 150 m out (our example)</text>
+
+  <!-- Wind -->
+  <line x1="715" y1="62" x2="630" y2="62" stroke="#6e7781" stroke-width="3.5" marker-end="url(#aw)"/>
+  <line x1="705" y1="82" x2="640" y2="82" stroke="#6e7781" stroke-width="3.5" marker-end="url(#aw)"/>
+  <text x="672" y="47" text-anchor="middle" font-size="12.5" font-weight="700" fill="#59636e">wind</text>
+
+  <!-- Legend -->
+  <text x="30" y="378" font-size="13.5" fill="#1f2328">The drone only carries the bait and the weight of the line it pulls out. More distance and more wind means more drag.</text>
+  <text x="30" y="402" font-size="13.5" font-weight="600" fill="#59636e">The line stays on your rod. After the drop you reel in and fish as usual.</text>
+  <text x="30" y="426" font-size="13.5" font-weight="600" fill="#cf222e">Hook and bait must only ever be dropped over open water, never over people or boats.</text>
+</svg>

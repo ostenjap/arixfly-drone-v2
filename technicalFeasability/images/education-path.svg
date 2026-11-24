@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img">
+  <title>Learning path as four steps: A1/A3 licence, A2 licence, build your own drone, specific category later</title>
+  <defs>
+    <marker id="ag" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#1a7f37"/></marker>
+  </defs>
+  <rect x="1" y="1" width="758" height="448" rx="16" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+
+  <!-- Path arrow -->
+  <line x1="110" y1="226" x2="610" y2="78" stroke="#1a7f37" stroke-width="4" stroke-linecap="round" marker-end="url(#ag)"/>
+  <text x="60" y="214" font-size="13" font-weight="700" fill="#1a7f37">start here</text>
+
+  <!-- Small drone at the top -->
+  <line x1="652" y1="58" x2="692" y2="58" stroke="#1f2328" stroke-width="4" stroke-linecap="round"/>
+  <line x1="662" y1="58" x2="662" y2="66" stroke="#1f2328" stroke-width="3"/><line x1="682" y1="58" x2="682" y2="66" stroke="#1f2328" stroke-width="3"/>
+  <rect x="656" y="64" width="42" height="12" rx="5" fill="#0969da"/>
+  <text x="676" y="94" text-anchor="middle" font-size="12" font-weight="700" fill="#0b3d91">flying legally</text>
+
+  <!-- Step 1 -->
+  <rect x="40" y="250" width="165" height="110" rx="10" fill="#effaf2" stroke="#1a7f37" stroke-width="2.5"/>
+  <circle cx="62" cy="274" r="13" fill="#1a7f37"/><text x="62" y="279" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">1</text>
+  <text x="82" y="279" font-size="14.5" font-weight="700" fill="#1f2328">A1/A3 licence</text>
+  <text x="52" y="304" font-size="12.5" fill="#1f2328">Online course and exam,</text>
+  <text x="52" y="321" font-size="12.5" fill="#1f2328">3 to 6 hours. Lets you</text>
+  <text x="52" y="338" font-size="12.5" fill="#1f2328">fly small drones.</text>
+
+  <!-- Step 2 -->
+  <rect x="205" y="200" width="165" height="160" rx="10" fill="#ddf4ff" stroke="#0969da" stroke-width="2.5"/>
+  <circle cx="227" cy="224" r="13" fill="#0969da"/><text x="227" y="229" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">2</text>
+  <text x="247" y="229" font-size="14.5" font-weight="700" fill="#1f2328">A2 licence</text>
+  <text x="217" y="254" font-size="12.5" fill="#1f2328">Extra training and a</text>
+  <text x="217" y="271" font-size="12.5" fill="#1f2328">theory exam. Lets you fly</text>
+  <text x="217" y="288" font-size="12.5" fill="#1f2328">closer to people (30 m,</text>
+  <text x="217" y="305" font-size="12.5" fill="#1f2328">or 5 m in slow mode).</text>
+
+  <!-- Step 3 -->
+  <rect x="370" y="150" width="165" height="210" rx="10" fill="#fbefff" stroke="#8250df" stroke-width="2.5"/>
+  <circle cx="392" cy="174" r="13" fill="#8250df"/><text x="392" y="179" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">3</text>
+  <text x="412" y="179" font-size="14.5" font-weight="700" fill="#1f2328">Build your own</text>
+  <text x="382" y="204" font-size="12.5" fill="#1f2328">Kit, build, test with</text>
+  <text x="382" y="221" font-size="12.5" fill="#1f2328">props off and tethered.</text>
+  <text x="382" y="238" font-size="12.5" fill="#1f2328">Then insure, register and</text>
+  <text x="382" y="255" font-size="12.5" fill="#1f2328">label it so it is legal.</text>
+
+  <!-- Step 4 (later) -->
+  <rect x="535" y="100" width="165" height="260" rx="10" fill="#f6f8fa" stroke="#6e7781" stroke-width="2.5" stroke-dasharray="8 6"/>
+  <circle cx="557" cy="124" r="13" fill="#6e7781"/><text x="557" y="129" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">4</text>
+  <text x="577" y="129" font-size="14.5" font-weight="700" fill="#1f2328">Specific category</text>
+  <text x="547" y="154" font-size="12.5" fill="#1f2328">Bigger jobs and flights</text>
+  <text x="547" y="171" font-size="12.5" fill="#1f2328">beyond the open rules.</text>
+  <text x="547" y="196" font-size="12.5" font-weight="600" fill="#59636e">Later. Not in this plan.</text>
+
+  <!-- Who pays pills -->
+  <rect x="55" y="372" width="135" height="26" rx="13" fill="#1a7f37"/>
+  <text x="122" y="390" text-anchor="middle" font-size="11.5" font-weight="700" fill="#fff">FREE FOR YOU</text>
+  <rect x="220" y="372" width="135" height="26" rx="13" fill="#0969da"/>
+  <text x="287" y="390" text-anchor="middle" font-size="11.5" font-weight="700" fill="#fff">PROGRAM-FUNDED</text>
+  <rect x="385" y="372" width="135" height="26" rx="13" fill="#8250df"/>
+  <text x="452" y="390" text-anchor="middle" font-size="11.5" font-weight="700" fill="#fff">YOU BUILD</text>
+  <rect x="550" y="372" width="135" height="26" rx="13" fill="#6e7781"/>
+  <text x="617" y="390" text-anchor="middle" font-size="11.5" font-weight="700" fill="#fff">LATER</text>
+
+  <text x="40" y="428" font-size="13" font-weight="600" fill="#59636e">Each step ends with a licence or a legal checklist, so nobody flies on a guess.</text>
+</svg>
