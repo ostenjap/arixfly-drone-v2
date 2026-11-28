@@ -10,6 +10,36 @@ But the phone app has to talk to the drone somehow. So we watched that conversat
 
 That's the whole trick, and it's not a hack. We didn't break any encryption, flash any firmware or bypass any lock. The laptop speaks the drone's own language, read from our own app and our own captures. Then we put a brain on top of it.
 
+### How it fits together
+
+```mermaid
+flowchart TD
+    subgraph LEARN["1 · Learn the language (once)"]
+        A["Phone app flies the drone"] --> B["Capture its Wi-Fi packets"]
+        B --> C["Decode the bytes<br/>sticks 20–23 · buttons 25 · checksum 27"]
+    end
+
+    subgraph FLY["2 · Fly from the laptop (39× per second)"]
+        D["Mission<br/>table A → table B"] --> E["Planner<br/>smooth path + pre-flight checks"]
+        E --> F["Controller<br/>stick commands"]
+        F --> G{"Safety supervisor<br/>box · time cap · battery · you"}
+        G -- OK --> H["Drone link<br/>88-byte UDP packet"]
+        G -- "too risky" --> L["Land or motors off"]
+        H --> I(("HS420<br/>drone"))
+    end
+
+    subgraph SENSE["3 · See where it is"]
+        I -- "live video ~19 fps" --> J["ArUco tag + visual odometry"]
+        W["Laptop webcam"] --> K["Drone body tracker"]
+        J --> M["Kalman estimator<br/>position · speed · drift"]
+        K --> M
+    end
+
+    C -.-> H
+    M --> F
+    M --> G
+```
+
 ## What it can do
 
 Picture a drone that has no GPS, no position sensor and no idea where it is. It also turns right by itself at about 7° per second and drifts backwards with the sticks centred. Its video reaches the laptop up to 0.3 seconds late. Now try to land it on a table.
