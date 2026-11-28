@@ -13,31 +13,15 @@ That's the whole trick, and it's not a hack. We didn't break any encryption, fla
 ### How it fits together
 
 ```mermaid
-flowchart TD
-    subgraph LEARN["1 · Learn the language (once)"]
-        A["Phone app flies the drone"] --> B["Capture its Wi-Fi packets"]
-        B --> C["Decode the bytes<br/>sticks 20–23 · buttons 25 · checksum 27"]
-    end
-
-    subgraph FLY["2 · Fly from the laptop (39× per second)"]
-        D["Mission<br/>table A → table B"] --> E["Planner<br/>smooth path + pre-flight checks"]
-        E --> F["Controller<br/>stick commands"]
-        F --> G{"Safety supervisor<br/>box · time cap · battery · you"}
-        G -- OK --> H["Drone link<br/>88-byte UDP packet"]
-        G -- "too risky" --> L["Land or motors off"]
-        H --> I(("HS420<br/>drone"))
-    end
-
-    subgraph SENSE["3 · See where it is"]
-        I -- "live video ~19 fps" --> J["ArUco tag + visual odometry"]
-        W["Laptop webcam"] --> K["Drone body tracker"]
-        J --> M["Kalman estimator<br/>position · speed · drift"]
-        K --> M
-    end
-
-    C -.-> H
-    M --> F
-    M --> G
+flowchart LR
+    A["📱 Phone app"] -- "capture + decode<br/>the 88-byte packets" --> P["Mission<br/>table A → B"]
+    P --> C["Planner +<br/>controller"]
+    C --> S{"Safety<br/>supervisor"}
+    S -- OK --> D(("🚁 HS420"))
+    S -- risky --> X["Land /<br/>motors off"]
+    D -- "live video" --> V["Tag + visual<br/>odometry"]
+    V --> K["Kalman<br/>estimator"]
+    K --> C
 ```
 
 ## What it can do
