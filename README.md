@@ -1,56 +1,98 @@
-# Drone software
+# Arixfly Drone v2
 
-Software to fly a Holy Stone HS420 autonomously: from one sentence of text, the drone lifts off table A and lands on table B. Separate from the Arixfly website at the repo root.
+**Teaching a toy drone to fly itself, using only a laptop and the drone's own app as a guide.**
 
-Plan, rules and current status: [CLAUDE.md](CLAUDE.md). Full test log with every byte we found: [notes/findings.md](notes/findings.md).
+## What this is
 
-## What works so far
+The drone here is a Holy Stone HS420: a cheap consumer quadcopter you can buy off the shelf and fly from a phone app. It was never meant to be programmed. There's no SDK and no developer mode, and nobody ships documentation for its radio link.
 
-- The drone is controlled over Wi-Fi. It opens its own network (`HolyStoneFPV_…`), and the app sends UDP packets to `192.168.169.1:8800` about 39 times per second.
-- Packet layout (`ef 02` type, 88 bytes), decoded from the HS420 app itself (class `lxMjxCtrlPro`): bytes 20–23 = throttle, yaw, roll, pitch (0–255, centre 128; roll and pitch carry the app's trim), byte 24 = speed level, byte 25 = commands (`0x01` takeoff, `0x02` land, `0x04` emergency stop, `0x20` flip, `0x80` gyro calibration), XOR checksum of bytes 19–26 at 27.
-- One-key takeoff from the laptop works (lifted off 2 of 2).
-- Failsafe: the motors stop about 1.2 s after the last packet.
+But the phone app has to talk to the drone somehow. So we watched that conversation. The HS420 opens its own Wi-Fi network, and the app sends it a small 88-byte message about 39 times per second over UDP. Inside that message, four bytes are the sticks (throttle, yaw, roll, pitch) and one byte holds the buttons (takeoff, land, emergency stop). Once you know which byte is which, a laptop can say exactly the same things the phone says.
 
-**2026-11-05: the drone crashed into water.** The flight window had used a stick order and command bits taken from a different app (turbodrone), so throttle went to the roll byte and the drone was never calibrated. The code now follows the decoded app layout. Not verified yet: stick directions, gyro calibration `0x80`, emergency stop `0x04` in flight, land `0x02`. No free flights until those are checked; see [notes/findings.md](notes/findings.md).
+That's the whole trick, and it's not a hack. We didn't break any encryption, flash any firmware or bypass any lock. The laptop speaks the drone's own language, read from our own app and our own captures. Then we put a brain on top of it.
+
+## What it can do
+
+Picture a drone that has no GPS, no position sensor and no idea where it is. It also turns right by itself at about 7° per second and drifts backwards with the sticks centred. Its video reaches the laptop up to 0.3 seconds late. Now try to land it on a table.
+
+That's the problem this repo works on.
+
+- **The laptop flies the drone.** Takeoff, landing, emergency stop and every stick axis come from Python. You can fly from the keyboard or an Xbox controller, or let the autopilot do it.
+- **It sees through the drone's own eyes.** Every frame of the onboard camera streams live to the laptop at about 19 fps while the drone is flying. Getting there meant finding out that the drone sends 4 frames and then waits for an "I got it" for each one, so a single missed acknowledgement freezes the feed.
+- **It flies toward a target.** A printed ArUco tag (a QR-code-like marker) sits on the landing table. From one camera picture the drone works out the distance and the direction to the tag, steers toward it and lands in front of it. At 1 m the distance reading was within 4 % of the true value.
+- **It knows which way it's facing.** Visual odometry compares each camera frame to the one before. On recorded flights its heading error was 0.02° (median), and that holds the nose straight even when the tag is out of view.
+- **It learns its own bad habits.** The v2 flight stack (`flight/`) runs a Kalman filter that estimates where the drone is, how fast it moves and how much it drifts. It learns that drift during each flight and cancels it. Video arrives late, so the filter rewinds to the moment each frame was taken and replays everything since then.
+- **Safety has the last word.** A separate supervisor checks every command against a flight box, a time cap, battery level, lost video and how close the drone is to you. Depending on the check it lands the drone or cuts the motors. On the drone, Space is always the kill switch.
+- **There's a simulator that doubts itself.** Each simulated flight draws its own slightly wrong drone (other gains, lags, drift and camera tilt), so the software is tested against a model that's wrong. If it only works on a perfect drone, it doesn't count.
+
+Every number above was measured on the real drone and is logged in [notes/findings.md](notes/findings.md), including the day it crashed into water because we trusted a byte layout from a different drone's app.
+
+This is research in progress, not a finished product. Real flights so far are tethered or close to the ground. Full A-to-B autonomy works in the simulator and is still being tuned on the real drone.
 
 ![Flight window](docs/flight_ui.png)
 
-## Tools
+## Fly your own drone with it
 
-All scripts run from this folder and print a usage note at the top.
+You don't need to understand every line here. The repo is written so that an AI coding assistant, such as [Claude Code](https://claude.com/claude-code), can read it, understand the method and redo it for your drone. That can be the same HS420 or a completely different one. Treat this code as a worked example, not a library.
 
-| Script | What it does |
-|---|---|
-| `tools/wifi_scan.py` | Forces a Windows Wi-Fi scan and diffs it against a baseline, to find the drone's network |
-| `tools/pcap_filter.py` | Keeps only packets to or from given IPs (drops other apps' traffic unread) |
-| `tools/pcap_summary.py` | Flow table and sample payloads of a capture |
-| `tools/replay_test.py` | Sends control packets from the laptop. Dry run by default; `--send` joins the drone Wi-Fi, `--listen` times the motors with the mic |
-| `tools/joystick_fly.py` | Flight window for the Xbox controller: Y connect, X calibrate, hold A takeoff / land, B or Space emergency stop, D-pad strength and roll trim, LB/RB pitch trim, time cap with auto landing |
-| `tools/preflight_test.py` | Scripted props-off / tethered runs (calibrate, takeoff, e-stop, land, throttle steps), timed with the mic |
-| `tools/flight_ui.py` | Mission-control style drawing for the flight window (`python tools/flight_ui.py` renders previews) |
-| `tools/controller_test.py` | Test screen for the controller: sticks, drift, buttons, triggers, rumble |
-| `tools/motor_listen.py` | Laptop mic: when the motors run and at what pitch. Saves numbers only, no audio unless `--keep-wav` |
-| `tools/aruco_tags.py` | Makes the printable A4 tag sheet in `markers/` |
-| `tools/aruco_track.py` | Webcam tracker: distance and heading from the drone tag to the table-B tag |
+### Steps
 
-Requirements: Python 3.12, `pygame-ce`, `opencv-python` (with the `aruco` module), `numpy`, `Pillow`, `sounddevice`.
+1. **Fork this repo** and clone it to your laptop.
+2. **Check that your drone talks over Wi-Fi.** Turn it on and look for a new Wi-Fi network (often named `…FPV…` or after the brand). If your drone uses only its own radio remote and no app, this method won't work as-is.
+3. **Open the folder in Claude Code** (or your AI assistant of choice) and paste the prompt below.
+4. **Capture your app.** The assistant will ask you to record the app's traffic while you do one move at a time: takeoff, land, each stick. This is the most important step, because the assistant must learn your drone from your drone and not guess.
+5. **Test with the propellers off first.** Then fly tethered on a string over soft ground. Change one thing per test and write down what happened.
+6. **Close the loop.** Print the ArUco tag sheet from [markers/](markers/), then work up step by step: live video, tag distance, autopilot, simulator.
 
-```bash
-cd drone-software
-python tools/replay_test.py              # dry run, sends nothing
-python tools/controller_test.py          # check the controller, no drone
-python tools/joystick_fly.py --dry       # flight window without sending
-python tools/aruco_track.py              # live webcam tracker, q to quit
+### The prompt
+
+```text
+Take a look at how this repo works: README.md, CLAUDE.md (plan, rules, status log),
+notes/findings.md (every verified byte and test), tools/ and flight/.
+
+I want to do the same thing with MY drone: <brand and model>, controlled by the app
+<app name>. Use this repo as inspiration and as a method, not as truth. My drone's
+protocol is probably different.
+
+Work the same way this project did:
+1. Help me find out how my app talks to my drone (Wi-Fi network, IP, port, packet rate).
+2. Ask me for captures of one move at a time, and decode the packets only from MY captures.
+   Never assume a byte layout from another drone or app.
+3. Build a laptop sender with a dry-run mode, a hard time cap and a kill key.
+4. Plan props-off and tethered tests, one change per test, and log the results in
+   notes/findings.md.
+5. Only then: live video, tag tracking, the autopilot, and a simulator.
+
+Rules: only my own drone and my own captures. Never break encryption or bypass
+access protection. If pairing or encryption blocks us, stop and tell me.
+Safety first, and never fly near people.
 ```
 
-## Safety
+If you have the exact same drone (HS420), skip the decoding and start with `tools/live_flight_v2.py --test 10` (props off), then read [notes/next_steps.md](notes/next_steps.md).
 
-Every new command is tested with the propellers off or the drone tethered. Every flight script has a hard time cap and a kill path. Never fly near people.
+## Try it without a drone
 
-## Folders
+Python 3.12 with `numpy`, `opencv-contrib-python` (for ArUco), `pygame-ce`, `Pillow` and `sounddevice`.
 
-- `tools/`: Python scripts
-- `captures/`: packet captures, filtered to the drone's IPs only
-- `notes/findings.md`: test log
-- `markers/`: ArUco tag sheet (PNG and PDF, print at 100 %)
-- `docs/`: screenshots
+```bash
+python flight/sim.py --runs 20            # simulated A-to-B flights with a scorecard
+python flight/planner.py missions/a_to_b.json   # plan a route and run the pre-flight checks
+python tests/run_all.py                   # loopback tests, never touch the drone
+python tools/joystick_fly.py --dry        # the flight window, sending nothing
+```
+
+## Map of the repo
+
+| Folder | What's inside |
+|---|---|
+| `flight/` | The v2 stack: world geometry, motion model, Kalman estimator, planner, controller, safety supervisor, pilot states, simulator |
+| `tools/` | Everything live: the drone link and video (`drone_link.py`), flight windows (`live_flight_v2.py`, `joystick_fly.py`), tag tracking, visual odometry (`tracker.py`), flight review, packet capture helpers |
+| `tests/` | Fake drones and simulators that the code is tested against, never the real drone |
+| `calib/` | Camera calibration, motion model and trims measured on our drone |
+| `missions/`, `shows/` | Routes and timed move scripts as JSON |
+| `notes/` | The lab notebook: findings, drift and battery measurements, next steps |
+| `technicalFeasability/` | Six product ideas built on this, each with a feasibility check |
+| `markers/` | Printable ArUco tag sheet (print at 100 %) |
+
+## Safety and the law
+
+Test every new command with the propellers off or the drone tethered. Every flight script has a hard time cap and a kill key. Never fly near people, animals or water. Only work with a drone you own, and check your country's drone rules before you fly (in the EU that means the A1/A3 open category).
